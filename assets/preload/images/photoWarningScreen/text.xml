@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="text.png">
+	<!-- Created with Adobe Animate version 20.0.2.22168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="photoSensitivityWarningText0000" x="0" y="0" width="1071" height="211"/>
+	<SubTexture name="photoSensitivityWarningText0001" x="0" y="0" width="1071" height="211"/>
+	<SubTexture name="photoSensitivityWarningText0002" x="0" y="215" width="1070" height="210" frameX="-1" frameY="0" frameWidth="1071" frameHeight="211"/>
+	<SubTexture name="photoSensitivityWarningText0003" x="0" y="215" width="1070" height="210" frameX="-1" frameY="0" frameWidth="1071" frameHeight="211"/>
+</TextureAtlas>

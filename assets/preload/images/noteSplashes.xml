@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="noteSplashes.png">
+	<!-- Created with Adobe Animate version 20.0.2.22168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BlueSplash0000" x="0" y="0" width="135" height="199" frameX="-49" frameY="-45" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="BlueSplash0001" x="139" y="0" width="210" height="267" frameX="-16" frameY="-4" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="BlueSplash0002" x="353" y="0" width="231" height="277" frameX="-7" frameY="-2" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="BlueSplash0003" x="588" y="0" width="244" height="289"/>
+	<SubTexture name="GreenSplash0000" x="836" y="0" width="135" height="199" frameX="-49" frameY="-45" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="GreenSplash0001" x="975" y="0" width="210" height="267" frameX="-16" frameY="-4" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="GreenSplash0002" x="1189" y="0" width="231" height="277" frameX="-7" frameY="-2" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="GreenSplash0003" x="1424" y="0" width="244" height="289"/>
+	<SubTexture name="PurpleSplash0000" x="1672" y="0" width="135" height="199" frameX="-49" frameY="-45" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="PurpleSplash0001" x="1811" y="0" width="210" height="267" frameX="-16" frameY="-4" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="PurpleSplash0002" x="0" y="293" width="231" height="277" frameX="-7" frameY="-2" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="PurpleSplash0003" x="235" y="293" width="244" height="289"/>
+	<SubTexture name="RedSplash0000" x="483" y="293" width="135" height="199" frameX="-49" frameY="-45" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="RedSplash0001" x="622" y="293" width="210" height="267" frameX="-16" frameY="-4" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="RedSplash0002" x="836" y="293" width="231" height="277" frameX="-7" frameY="-2" frameWidth="244" frameHeight="289"/>
+	<SubTexture name="RedSplash0003" x="1071" y="293" width="244" height="289"/>
+</TextureAtlas>

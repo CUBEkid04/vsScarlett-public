@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Velvet_Assets.png">
+	<!-- Created with Adobe Animate version 20.0.2.22168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Velvet Down0000" x="0" y="0" width="422" height="567" frameX="0" frameY="-11" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Down0001" x="0" y="0" width="422" height="567" frameX="0" frameY="-11" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Down0002" x="426" y="0" width="403" height="578" frameX="-12" frameY="0" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Down0003" x="426" y="0" width="403" height="578" frameX="-12" frameY="0" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Down0004" x="426" y="0" width="403" height="578" frameX="-12" frameY="0" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Down0005" x="426" y="0" width="403" height="578" frameX="-12" frameY="0" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Down0006" x="426" y="0" width="403" height="578" frameX="-12" frameY="0" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Down0007" x="426" y="0" width="403" height="578" frameX="-12" frameY="0" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Down0008" x="426" y="0" width="403" height="578" frameX="-12" frameY="0" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Down0009" x="426" y="0" width="403" height="578" frameX="-12" frameY="0" frameWidth="422" frameHeight="578"/>
+	<SubTexture name="Velvet Enrage0000" x="6960" y="859" width="296" height="817" frameX="-182" frameY="-228" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Enrage0001" x="6960" y="859" width="296" height="817" frameX="-182" frameY="-228" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Enrage0002" x="833" y="0" width="374" height="827" frameX="-145" frameY="-230" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0003" x="1211" y="0" width="524" height="798" frameX="-11" frameY="-244" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0004" x="1211" y="0" width="524" height="798" frameX="-11" frameY="-244" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0005" x="1739" y="0" width="546" height="796" frameX="-3" frameY="-246" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0006" x="1739" y="0" width="546" height="796" frameX="-3" frameY="-246" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0007" x="2289" y="0" width="485" height="794" frameX="-54" frameY="-248" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0008" x="2778" y="0" width="493" height="849" frameX="-50" frameY="-193" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0009" x="3275" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0010" x="3772" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0011" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0012" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0013" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0014" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0015" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0016" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0017" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0018" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0019" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0020" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0021" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0022" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0023" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0024" x="4269" y="0" width="493" height="855" frameX="-50" frameY="-187" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0025" x="4766" y="0" width="508" height="849" frameX="-43" frameY="-193" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0026" x="5278" y="0" width="508" height="848" frameX="-43" frameY="-194" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0027" x="5790" y="0" width="508" height="848" frameX="-43" frameY="-194" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0028" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0029" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0030" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0031" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0032" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0033" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0034" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0035" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0036" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0037" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0038" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0039" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0040" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0041" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0042" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0043" x="6302" y="0" width="516" height="845" frameX="-39" frameY="-197" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0044" x="6822" y="0" width="526" height="839" frameX="-34" frameY="-203" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0045" x="7352" y="0" width="526" height="839" frameX="-34" frameY="-203" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0046" x="0" y="859" width="534" height="837" frameX="-30" frameY="-206" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0047" x="538" y="859" width="534" height="837" frameX="-30" frameY="-206" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0048" x="1076" y="859" width="441" height="1043" frameX="-76" frameY="0" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0049" x="1521" y="859" width="602" height="885" frameX="-19" frameY="-158" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0050" x="2127" y="859" width="699" height="957" frameX="0" frameY="-86" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0051" x="2830" y="859" width="544" height="992" frameX="-27" frameY="-51" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0052" x="3378" y="859" width="566" height="983" frameX="-25" frameY="-60" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0053" x="3948" y="859" width="574" height="985" frameX="-25" frameY="-58" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0054" x="4526" y="859" width="609" height="896" frameX="0" frameY="-147" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0055" x="5139" y="859" width="564" height="779" frameX="0" frameY="-264" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0056" x="5139" y="859" width="564" height="779" frameX="0" frameY="-264" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0057" x="5139" y="859" width="564" height="779" frameX="0" frameY="-264" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0058" x="5139" y="859" width="564" height="779" frameX="0" frameY="-264" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Enrage0059" x="5139" y="859" width="564" height="779" frameX="0" frameY="-264" frameWidth="699" frameHeight="1057"/>
+	<SubTexture name="Velvet Idle0000" x="5707" y="859" width="315" height="804" frameX="0" frameY="-13" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0001" x="5707" y="859" width="315" height="804" frameX="0" frameY="-13" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0002" x="6026" y="859" width="313" height="806" frameX="-1" frameY="-11" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0003" x="6026" y="859" width="313" height="806" frameX="-1" frameY="-11" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0004" x="6343" y="859" width="308" height="809" frameX="-3" frameY="-8" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0005" x="6343" y="859" width="308" height="809" frameX="-3" frameY="-8" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0006" x="6655" y="859" width="301" height="813" frameX="-5" frameY="-4" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0007" x="6655" y="859" width="301" height="813" frameX="-5" frameY="-4" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0008" x="6960" y="859" width="296" height="817" frameX="-9" frameY="0" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0009" x="6960" y="859" width="296" height="817" frameX="-9" frameY="0" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0010" x="6960" y="859" width="296" height="817" frameX="-9" frameY="0" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0011" x="6960" y="859" width="296" height="817" frameX="-9" frameY="0" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0012" x="6960" y="859" width="296" height="817" frameX="-9" frameY="0" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Idle0013" x="6960" y="859" width="296" height="817" frameX="-9" frameY="0" frameWidth="315" frameHeight="817"/>
+	<SubTexture name="Velvet Left0000" x="7260" y="859" width="453" height="803" frameX="-8" frameY="-1" frameWidth="462" frameHeight="804"/>
+	<SubTexture name="Velvet Left0001" x="7260" y="859" width="453" height="803" frameX="-8" frameY="-1" frameWidth="462" frameHeight="804"/>
+	<SubTexture name="Velvet Left0002" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0003" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0004" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0005" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0006" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0007" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0008" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0009" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0010" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0011" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0012" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0013" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0014" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Left0015" x="7717" y="859" width="462" height="804"/>
+	<SubTexture name="Velvet Pissed Down0000" x="0" y="1906" width="339" height="721" frameX="0" frameY="-11" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Down0001" x="0" y="1906" width="339" height="721" frameX="0" frameY="-11" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Down0002" x="343" y="1906" width="335" height="732" frameX="-5" frameY="0" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Down0003" x="343" y="1906" width="335" height="732" frameX="-5" frameY="0" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Down0004" x="682" y="1906" width="338" height="732" frameX="-5" frameY="0" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Down0005" x="682" y="1906" width="338" height="732" frameX="-5" frameY="0" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Down0006" x="682" y="1906" width="338" height="732" frameX="-5" frameY="0" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Down0007" x="682" y="1906" width="338" height="732" frameX="-5" frameY="0" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Down0008" x="682" y="1906" width="338" height="732" frameX="-5" frameY="0" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Down0009" x="682" y="1906" width="338" height="732" frameX="-5" frameY="0" frameWidth="343" frameHeight="732"/>
+	<SubTexture name="Velvet Pissed Left0000" x="1024" y="1906" width="475" height="788" frameX="0" frameY="-5" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Left0001" x="1024" y="1906" width="475" height="788" frameX="0" frameY="-5" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Left0002" x="1503" y="1906" width="475" height="793" frameX="-1" frameY="0" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Left0003" x="1982" y="1906" width="475" height="793" frameX="-1" frameY="0" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Left0004" x="2461" y="1906" width="475" height="793" frameX="-1" frameY="0" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Left0005" x="2940" y="1906" width="475" height="793" frameX="-1" frameY="0" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Left0006" x="2461" y="1906" width="475" height="793" frameX="-1" frameY="0" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Left0007" x="2461" y="1906" width="475" height="793" frameX="-1" frameY="0" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Left0008" x="3419" y="1906" width="475" height="793" frameX="-1" frameY="0" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Left0009" x="3419" y="1906" width="475" height="793" frameX="-1" frameY="0" frameWidth="476" frameHeight="793"/>
+	<SubTexture name="Velvet Pissed Right0000" x="3898" y="1906" width="543" height="760" frameX="-2" frameY="-3" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Right0001" x="3898" y="1906" width="543" height="760" frameX="-2" frameY="-3" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Right0002" x="4445" y="1906" width="534" height="763" frameX="0" frameY="0" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Right0003" x="4983" y="1906" width="534" height="763" frameX="0" frameY="0" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Right0004" x="5521" y="1906" width="530" height="763" frameX="0" frameY="0" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Right0005" x="5521" y="1906" width="530" height="763" frameX="0" frameY="0" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Right0006" x="6055" y="1906" width="530" height="763" frameX="0" frameY="0" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Right0007" x="6055" y="1906" width="530" height="763" frameX="0" frameY="0" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Right0008" x="6589" y="1906" width="530" height="763" frameX="0" frameY="0" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Right0009" x="6589" y="1906" width="530" height="763" frameX="0" frameY="0" frameWidth="545" frameHeight="763"/>
+	<SubTexture name="Velvet Pissed Up0000" x="7123" y="1906" width="501" height="808" frameX="-45" frameY="0" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Pissed Up0001" x="7123" y="1906" width="501" height="808" frameX="-45" frameY="0" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Pissed Up0002" x="7628" y="1906" width="546" height="800" frameX="-5" frameY="-8" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Pissed Up0003" x="7628" y="1906" width="546" height="800" frameX="-5" frameY="-8" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Pissed Up0004" x="0" y="2718" width="551" height="800" frameX="0" frameY="-8" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Pissed Up0005" x="0" y="2718" width="551" height="800" frameX="0" frameY="-8" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Pissed Up0006" x="0" y="2718" width="551" height="800" frameX="0" frameY="-8" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Pissed Up0007" x="0" y="2718" width="551" height="800" frameX="0" frameY="-8" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Pissed Up0008" x="0" y="2718" width="551" height="800" frameX="0" frameY="-8" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Pissed Up0009" x="0" y="2718" width="551" height="800" frameX="0" frameY="-8" frameWidth="551" frameHeight="808"/>
+	<SubTexture name="Velvet Rage Idle0000" x="555" y="2718" width="427" height="762" frameX="0" frameY="-22" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0001" x="986" y="2718" width="415" height="762" frameX="-5" frameY="-22" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0002" x="1405" y="2718" width="415" height="762" frameX="-5" frameY="-22" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0003" x="1824" y="2718" width="415" height="768" frameX="-5" frameY="-16" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0004" x="2243" y="2718" width="405" height="768" frameX="-12" frameY="-16" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0005" x="2652" y="2718" width="405" height="776" frameX="-12" frameY="-8" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0006" x="2652" y="2718" width="405" height="776" frameX="-12" frameY="-8" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0007" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0008" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0009" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0010" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0011" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0012" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0013" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0014" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0015" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0016" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0017" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0018" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Rage Idle0019" x="3061" y="2718" width="395" height="784" frameX="-18" frameY="0" frameWidth="427" frameHeight="784"/>
+	<SubTexture name="Velvet Right0000" x="3460" y="2718" width="481" height="744" frameX="-1" frameY="-1" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Right0001" x="3460" y="2718" width="481" height="744" frameX="-1" frameY="-1" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Right0002" x="3945" y="2718" width="472" height="745" frameX="0" frameY="0" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Right0003" x="3945" y="2718" width="472" height="745" frameX="0" frameY="0" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Right0004" x="3945" y="2718" width="472" height="745" frameX="0" frameY="0" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Right0005" x="3945" y="2718" width="472" height="745" frameX="0" frameY="0" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Right0006" x="3945" y="2718" width="472" height="745" frameX="0" frameY="0" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Right0007" x="3945" y="2718" width="472" height="745" frameX="0" frameY="0" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Right0008" x="3945" y="2718" width="472" height="745" frameX="0" frameY="0" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Right0009" x="3945" y="2718" width="472" height="745" frameX="0" frameY="0" frameWidth="482" frameHeight="745"/>
+	<SubTexture name="Velvet Up0000" x="4421" y="2718" width="485" height="852" frameX="0" frameY="0" frameWidth="485" frameHeight="854"/>
+	<SubTexture name="Velvet Up0001" x="4421" y="2718" width="485" height="852" frameX="0" frameY="0" frameWidth="485" frameHeight="854"/>
+	<SubTexture name="Velvet Up0002" x="4910" y="2718" width="483" height="840" frameX="-2" frameY="-14" frameWidth="485" frameHeight="854"/>
+	<SubTexture name="Velvet Up0003" x="4910" y="2718" width="483" height="840" frameX="-2" frameY="-14" frameWidth="485" frameHeight="854"/>
+	<SubTexture name="Velvet Up0004" x="4910" y="2718" width="483" height="840" frameX="-2" frameY="-14" frameWidth="485" frameHeight="854"/>
+	<SubTexture name="Velvet Up0005" x="4910" y="2718" width="483" height="840" frameX="-2" frameY="-14" frameWidth="485" frameHeight="854"/>
+	<SubTexture name="Velvet Up0006" x="4910" y="2718" width="483" height="840" frameX="-2" frameY="-14" frameWidth="485" frameHeight="854"/>
+	<SubTexture name="Velvet Up0007" x="4910" y="2718" width="483" height="840" frameX="-2" frameY="-14" frameWidth="485" frameHeight="854"/>
+	<SubTexture name="Velvet Up0008" x="4910" y="2718" width="483" height="840" frameX="-2" frameY="-14" frameWidth="485" frameHeight="854"/>
+	<SubTexture name="Velvet Up0009" x="4910" y="2718" width="483" height="840" frameX="-2" frameY="-14" frameWidth="485" frameHeight="854"/>
+</TextureAtlas>

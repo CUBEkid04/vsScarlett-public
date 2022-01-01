@@ -1,0 +1,10 @@
+:scarlett:;0.05;Well, it looks like it's starting to storm. The weather here has been a little too uneasy recently.
+:bf:;0.05;boop bep bo bop?
+:gf:;0.05;I'm afraid of lightning!
+:scarlett:;0.05;Ah well... The paint won't dry quick enough, so that's a ↓brilliant paintjob wasted...
+:scarlett:;0.05;Anyway, prepare to drop the finale. Electric chip grind noises ↓mixed with drums to make up the sickest of songs.
+:bf:;0.05;Beep!
+:gf:;0.05;Please don't do it out here...
+:scarlett:;0.05;You know, I'm starting to trust you that you might not be a part of the CHAO faction. But rather a couple who wants to date eachother, and I'm completely fine with that.
+:bf:;0.05;Bap!
+:gf:;0.1;Why does nobody listen to me...

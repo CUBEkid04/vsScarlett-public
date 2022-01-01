@@ -1,0 +1,15 @@
+:gf:;0.05;Abandoned in nature, plants and vines growing in all directions.
+:gf:;0.05;Visible degeneration of structures.
+:bf:;0.05;Beep boop bop?
+:gf:;0.05;There were shoeprints leading into this place embedded in the dirt.
+:gf:;0.05;I wonder if anyone could be living here.
+:velvet:;0.05;I do, bitches...
+:gf:;0.05;!
+:velvet:;0.05;Did any of you two happen to see a purple haired girl in the vicinity?
+:bf:;0.05;Bep bloop brrp?
+:gf:;0.05;Oh, yeaahh! I saw her over th-
+:velvet:;0.05;Enough! I know you're lying!
+:gf:;0.05;!!!
+:velvet:;0.05;Now, per order of Alter CHAO, I shall challenge you to a duel.
+:velvet:;0.1;And you WILL accept...
+:bf:;0.05;bloop beep brrrp skrrp!

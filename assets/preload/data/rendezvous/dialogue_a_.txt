@@ -1,0 +1,6 @@
+:gf:;0.05;Abandoned in nature, plants and vines growing in all directions.
+:gf:;0.05;Visible degeneration of structures.
+:bf:;0.05;Beep boop bop?
+:gf:;0.05;There were shoeprints leading into this place embedded in the dirt.
+:gf:;0.05;I wonder if anyone could be living here.
+:velvet:;0.05;I do, bitches...

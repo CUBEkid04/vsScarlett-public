@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dialogueChar.png">
+
+	<!-- Row 1 -->
+	<SubTexture name="Dialogue Scarlett0000" x="0" y="0" width="164" height="164" frameX="0" frameY="0" frameWidth="164" frameHeight="164"/>
+	<SubTexture name="Dialogue BF0000" x="164" y="0" width="164" height="164" frameX="0" frameY="0" frameWidth="164" frameHeight="164"/>
+	<SubTexture name="Dialogue GF0000" x="328" y="0" width="164" height="164" frameX="0" frameY="0" frameWidth="164" frameHeight="164"/>
+
+	<!-- Row 2 -->
+	<SubTexture name="Dialogue Velvet0000" x="0" y="164" width="164" height="164" frameX="0" frameY="0" frameWidth="164" frameHeight="164"/>
+</TextureAtlas>

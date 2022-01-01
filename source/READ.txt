@@ -1,0 +1,10 @@
+(OBSOLETE)
+Certain portions of the note code was used from VS. Shaggy to implement 7 notes total, 
+go check that mod out too if you haven't already: https://gamebanana.com/mods/284121
+
+I JUST CANT WRITE THIS MUCH SHIT FOR 3 ADDITIONAL NOTES, ONLY ONE, REE.
+
+Shaggy mod made by srPerez
+_________________________________________________________________________________________
+
+Certain scripts and code snippets were used from PsychEngine.
