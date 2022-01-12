@@ -25,7 +25,7 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	var isDevelopmentBuild:Bool = false;
+	public static var isDevelopmentBuild:Bool = false;
 
 	var curSelected:Int = 0;
 
@@ -33,6 +33,7 @@ class MainMenuState extends MusicBeatState
 
 	#if !switch
 	var optionShit:Array<String> = ['story mode', 'freeplay', 'gamebanana', 'options'];
+
 	// var optionShit:Array<String> = ['story mode', 'freeplay', 'altmix', 'gamebanana', 'options'];
 
 	// var optionShit:Array<String> = ['story mode', 'freeplay', 'altmix', 'bonus weeks', 'gamebanana', 'options'];
@@ -50,6 +51,11 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		if (isDevelopmentBuild)
+			optionShit = ['story mode', 'freeplay', 'altmix', 'bonus weeks', 'gamebanana', 'options'];
+
+		PlayState.isAltMix = false; // so B-Side Icons wont replace freeplay icons
+
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);

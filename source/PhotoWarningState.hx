@@ -49,21 +49,28 @@ class PhotoWarningState extends MusicBeatState
 		add(txtB);
 
 		var txtC:FlxText = new FlxText(0, 0, FlxG.width, 
-			"Press [ENTER] to dismiss, press [X] to never show again", 32);
-		txtC.setFormat("Continuum Bold", 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			"Press [ENTER] to dismiss\nPress [Y] to dismiss and enable Epileptic Mode\nPress [X] to never show again", 32);
+		txtC.setFormat("Continuum Bold", 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		txtC.screenCenter();
 		txtC.y = 620;
+		txtC.x += 330;
+		txtC.y -= 90;
 		txtC.antialiasing = true;
 		add(txtC);
 	}
 
 	override function update(elapsed:Float)
 	{
-		if (controls.ACCEPT || FlxG.keys.justPressed.X)
+		if (controls.ACCEPT || FlxG.keys.justPressed.Y || FlxG.keys.justPressed.X)
 		{
-			if (FlxG.keys.justPressed.X)
+			if (FlxG.keys.justPressed.X && !leftState)
 			{
 				ScarlettOptions.permDisableWarning = true;
+				ScarlettOptions.saveSettings();
+			}
+			if (FlxG.keys.justPressed.Y && !leftState)
+			{
+				ScarlettOptions.epileptic = true;
 				ScarlettOptions.saveSettings();
 			}
 			leftState = true;

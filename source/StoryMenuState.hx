@@ -312,6 +312,11 @@ class StoryMenuState extends MusicBeatState
 
 			PlayState.storyPlaylist = weekData[curWeek];
 			PlayState.isStoryMode = true;
+
+			PlayState.isBonusWeek = false;
+			PlayState.isAltMix = false;
+			PlayState.bonusStringID = " ";
+
 			selectedWeek = true;
 
 			var diffic = "";

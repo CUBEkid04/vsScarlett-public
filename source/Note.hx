@@ -24,6 +24,7 @@ class Note extends FlxSprite
 	public var sustainLength:Float = 0;
 	public var sustainLengthSprite:Float = 1.0;
 	public var isSustainNote:Bool = false;
+	public var isSustainEnd:Bool = false;
 
 	public var noteScore:Float = 1;
 	public var mania:Int = 0; // stole more from shaggy XD no sue, i cant write another set of notes for a new mod again
@@ -123,9 +124,15 @@ class Note extends FlxSprite
 			noteScore * 0.2;
 			alpha = 0.6;
 
+			if(ScarlettOptions.downscroll) flipY = true;
+
 			x += width / 2;
 
 			animation.play(frameN[noteData] + 'holdend');
+			if (ScarlettOptions.downscroll)
+			{
+				y += 79;
+			}
 			switch (noteData)
 			{
 				case 0:
@@ -145,6 +152,10 @@ class Note extends FlxSprite
 				{
 					case 0:
 					//nada
+				}
+				if (ScarlettOptions.downscroll)
+				{
+					y -= 79;
 				}
 				prevNote.animation.play(frameN[prevNote.noteData] + 'hold');
 				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * PlayState.SONG.speed * (0.7 / noteScale);

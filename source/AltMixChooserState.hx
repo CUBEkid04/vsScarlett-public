@@ -220,14 +220,39 @@ class AltMixChooserState extends MusicBeatState
 		switch (curDifficulty)
 		{
 			case 0:
-				diffTextStr = "EASY";
-				diffTextColor = FlxColor.fromRGB(0, 255, 0);
+				if (altMixAlbum == "B-Side")
+				{
+					diffTextStr = "EASIER";
+					diffTextColor = FlxColor.fromRGB(249, 207, 81);
+				}
+				else
+				{
+					diffTextStr = "EASY";
+					diffTextColor = FlxColor.fromRGB(0, 255, 0);
+				}
 			case 1:
-				diffTextStr = 'NORMAL';
-				diffTextColor = FlxColor.fromRGB(255, 255, 0);
+				if (altMixAlbum == "B-Side")
+				{
+					diffTextStr = 'STANDARD';
+					diffTextColor = FlxColor.fromRGB(255, 43, 123);
+				}
+				else
+				{
+					diffTextStr = 'NORMAL';
+					diffTextColor = FlxColor.fromRGB(255, 255, 0);
+				}
+				
 			case 2:
-				diffTextStr = "HARD";
-				diffTextColor = FlxColor.fromRGB(255, 0, 0);
+				if (altMixAlbum == "B-Side")
+				{
+					diffTextStr = "FLIP";
+					diffTextColor = FlxColor.fromRGB(0, 255, 255);
+				}
+				else
+				{
+					diffTextStr = "HARD";
+					diffTextColor = FlxColor.fromRGB(255, 0, 0);
+				}
 		}
 	}
 

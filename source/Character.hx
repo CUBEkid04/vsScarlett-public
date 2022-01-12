@@ -36,6 +36,8 @@ class Character extends FlxSprite
 		{
 			case 'gf':
 				tex = Paths.getSparrowAtlas('GF_assets');
+				if (PlayState.altMixAlbum == "B-Side" && PlayState.isAltMix)
+					tex = Paths.getSparrowAtlas('bside/GF_assets');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
 				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
@@ -151,6 +153,8 @@ class Character extends FlxSprite
 
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('BOYFRIEND');
+				if (PlayState.altMixAlbum == "B-Side" && PlayState.isAltMix)
+					tex = Paths.getSparrowAtlas('bside/BOYFRIEND');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -449,6 +453,8 @@ class Character extends FlxSprite
 
 			case 'velvet':
 				tex = Paths.getSparrowAtlas('Velvet_Assets');
+				if (PlayState.altMixAlbum == "B-Side" && PlayState.isAltMix)
+					tex = Paths.getSparrowAtlas('bside/Velvet_BSide');
 				frames = tex;
 
 				animation.addByPrefix('idle', 'Velvet Idle', 24, false);
@@ -469,6 +475,8 @@ class Character extends FlxSprite
 
 			case 'velvet-rage':
 				tex = Paths.getSparrowAtlas('Velvet_Assets');
+				if (PlayState.altMixAlbum == "B-Side" && PlayState.isAltMix)
+					tex = Paths.getSparrowAtlas('bside/Velvet_BSide');
 				frames = tex;
 
 				animation.addByPrefix('idle', 'Velvet Rage Idle', 24, false);

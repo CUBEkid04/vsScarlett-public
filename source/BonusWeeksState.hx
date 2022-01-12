@@ -180,7 +180,6 @@ class BonusWeeksState extends MusicBeatState
 									case 'options':
 										// FlxTransitionableState.skipNextTransIn = true;
 										// FlxTransitionableState.skipNextTransOut = true;
-										FlxG.switchState(new ScarlettOptionsState());
 										trace("Option Menu Selected");
 								}
 							});

@@ -172,6 +172,10 @@ class PlayState extends MusicBeatState
 	var velvetChromeAb:Bool = true; // Alongside the screenshake, display a Chromatic Abberation color separation effect.
 	var screenShift:Bool = true; // Alongside the screenshake, shift the window whenever Velvet hits a note
 
+	var hudYMultiplier = 1;
+	var hudYOffset = 0;
+	
+
 	// More Variables
 	public static var isBonusWeek:Bool = false;
 	public static var isAltMix:Bool = false;
@@ -195,6 +199,8 @@ class PlayState extends MusicBeatState
 	var rain:FlxSprite;
 
 	// Week 2
+
+	var rundownWiggle:WiggleEffect = new WiggleEffect();
 
 	// Tower portions are 76px in width each, 12 portions.
 	var fragmentationSpritePortionA:FlxSprite;
@@ -391,7 +397,7 @@ class PlayState extends MusicBeatState
 	{
 		if (!collapseOneShot)
 		{
-			if (ScarlettOptions.getAmbience())
+			if (ScarlettOptions.ambience)
 			{
 				var fragmentateSoundFile:String = 'fragmentate';
 				if (longOneShot)
@@ -490,14 +496,16 @@ class PlayState extends MusicBeatState
 
 			new FlxTimer().start(1.0, function(tmr:FlxTimer) {
 				nukedSkyCrackA.visible = true;
-				FlxG.camera.shake(0.01, 0.05);
+				if (ScarlettOptions.screenShake)
+					FlxG.camera.shake(0.01, 0.05);
 			});
 
 			new FlxTimer().start(2.05, function(tmr:FlxTimer) {
 				nukedSkyCrackB.visible = true;
 				nukedSkyCrackC.visible = true;
 				FlxTween.tween(nukedSkyCrackC, {alpha: 1}, 0.15);
-				FlxG.camera.shake(0.02, 0.5);
+				if (ScarlettOptions.screenShake)
+					FlxG.camera.shake(0.02, 0.5);
 			});
 
 			new FlxTimer().start(2.2, function(tmr:FlxTimer) {
@@ -550,6 +558,11 @@ class PlayState extends MusicBeatState
 
 		FlxCamera.defaultCameras = [camGame];
 
+
+		hudYMultiplier = (ScarlettOptions.downscroll) ? -1 : 1;
+		hudYOffset = (ScarlettOptions.downscroll) ? 720 : 0;
+
+
 		persistentUpdate = true;
 		persistentDraw = true;
 
@@ -557,9 +570,12 @@ class PlayState extends MusicBeatState
 			SONG = Song.loadFromJson('tutorial');
 
 		splashGroup = new FlxTypedGroup<NoteSplash>();
-		var initialSplash = new NoteSplash(100, 100, 0);
-		initialSplash.alpha = 0.0;
-		splashGroup.add(initialSplash);
+		if (ScarlettOptions.ScarlettOptions.noteSplash)
+		{
+			var initialSplash = new NoteSplash(100, 100, 0);
+			initialSplash.alpha = 0.0;
+			splashGroup.add(initialSplash);
+		}
 
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
@@ -776,16 +792,12 @@ class PlayState extends MusicBeatState
 						bg.antialiasing = true;
 						add(bg);
 
-						heatwaveWarpTwo = new WiggleEffect();
-						heatwaveWarpTwo.effectType = WiggleEffectType.FLAG;
-						heatwaveWarpTwo.waveAmplitude = 0.07;
-						heatwaveWarpTwo.waveFrequency = 4;
-						heatwaveWarpTwo.waveSpeed = 0.5;
-						distortionTwo = true; 
+						rundownWiggle.effectType = WiggleEffectType.FLAG;
+						rundownWiggle.waveAmplitude = 0.07;
+						rundownWiggle.waveFrequency = 4;
+						rundownWiggle.waveSpeed = 0.5;
 
-						var effectSky = heatwaveWarpTwo;
-
-						bg.shader = effectSky.shader;
+						bg.shader = rundownWiggle.shader;
 
 						var eclipse:FlxSprite = new FlxSprite(740, -80).loadGraphic(Paths.image('nukedPlant/nukedEclipse'));
 						eclipse.antialiasing = true;
@@ -863,7 +875,7 @@ class PlayState extends MusicBeatState
 				fg.antialiasing = true;
 				add(fg);
 
-				if (ScarlettOptions.getColorshift())
+				if (ScarlettOptions.colorshift)
 				{
 					if (SONG.song.toLowerCase() == 'russian-rundown' && !isAltMix)
 					{
@@ -1240,7 +1252,7 @@ class PlayState extends MusicBeatState
 			setChromeTwo(0);
 		}
 
-		if (ScarlettOptions.getHeatwave())
+		/* if (ScarlettOptions.getHeatwave())
 		{
 			heatwaveWarpOne = new WiggleEffect();
 			heatwaveWarpOne.effectType = WiggleEffectType.DREAMY;
@@ -1260,7 +1272,7 @@ class PlayState extends MusicBeatState
 			var effect = heatwaveWarpOne;
 			var effectTwo = heatwaveWarpTwo;
 			FlxG.camera.setFilters( [new ShaderFilter(cast effect.shader), new ShaderFilter(cast effectTwo.shader)]);
-		}
+		} */
 
 
 		var gfVersion:String = 'gf';
@@ -1395,7 +1407,7 @@ class PlayState extends MusicBeatState
 		add(dad);
 		add(boyfriend);
 
-		if (ScarlettOptions.getColorshift() && usesColorShift) // Colorshift gets primary colors
+		if (ScarlettOptions.colorshift && usesColorShift) // Colorshift gets primary colors
 		{
 			gf.color = FlxColor.fromRGB(colorShift_R, colorShift_G, colorShift_B);
 			dad.color = FlxColor.fromRGB(colorShift_R, colorShift_G, colorShift_B);
@@ -1421,7 +1433,7 @@ class PlayState extends MusicBeatState
 
 		Conductor.songPosition = -5000;
 
-		strumLine = new FlxSprite(0, 50).makeGraphic(FlxG.width, 10);
+		strumLine = new FlxSprite(0, (50 * hudYMultiplier) + hudYOffset).makeGraphic(FlxG.width, 10);
 		strumLine.scrollFactor.set();
 
 		strumLineNotes = new FlxTypedGroup<FlxSprite>();
@@ -1463,7 +1475,7 @@ class PlayState extends MusicBeatState
 		FlxG.camera.filtersEnabled = true;
 
 
-		healthBarBG = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
+		healthBarBG = new FlxSprite(0, ((FlxG.height * 0.9) * hudYMultiplier) + hudYOffset).loadGraphic(Paths.image('healthBar'));
 		healthBarBG.screenCenter(X);
 		healthBarBG.scrollFactor.set();
 		add(healthBarBG);
@@ -1853,7 +1865,8 @@ class PlayState extends MusicBeatState
 		inCutscene = false;
 
 		// hudArrows = [];
-		generateStaticArrows(0);
+		if (!ScarlettOptions.centerscroll)
+			generateStaticArrows(0);
 		generateStaticArrows(1);
 
 		talking = false;
@@ -2087,7 +2100,7 @@ class PlayState extends MusicBeatState
 
 					sustainNote.mustPress = gottaHitNote;
 
-					sustainNote.x += 42;
+					sustainNote.x += (ScarlettOptions.centerscroll) ? -278 : 42;
 
 					if (sustainNote.mustPress)
 					{
@@ -2101,7 +2114,7 @@ class PlayState extends MusicBeatState
 
 				swagNote.mustPress = gottaHitNote;
 
-				swagNote.x += 42;
+				swagNote.x += (ScarlettOptions.centerscroll) ? -278 : 42;
 
 				if (swagNote.mustPress)
 				{
@@ -2205,6 +2218,9 @@ class PlayState extends MusicBeatState
 
 			babyArrow.updateHitbox();
 			babyArrow.scrollFactor.set();
+			
+			if (ScarlettOptions.downscroll)
+				babyArrow.y -= 107;
 
 			if (!isStoryMode)
 			{
@@ -2222,7 +2238,7 @@ class PlayState extends MusicBeatState
 
 			babyArrow.animation.play('static');
 			babyArrow.x += 50;
-			babyArrow.x += 42;
+			babyArrow.x += (ScarlettOptions.centerscroll) ? -278 : 42;
 			babyArrow.x += ((FlxG.width / 2) * player);
 
 			/* if (player == 1)
@@ -2400,6 +2416,7 @@ class PlayState extends MusicBeatState
 
 		if (curSong.toLowerCase() == 'russian-rundown')
 		{
+			rundownWiggle.update(elapsed);
 			velvetScreamTime += 1;
 		}
 
@@ -2559,12 +2576,15 @@ class PlayState extends MusicBeatState
 		/* if (FlxG.keys.justPressed.NINE)
 			FlxG.switchState(new Charting()); */
 
-		#if debug
-		if (FlxG.keys.justPressed.EIGHT)
-			FlxG.switchState(new AnimationDebug(SONG.player2));
-		if (FlxG.keys.justPressed.FIVE)
-			FlxG.switchState(new AnimationDebug(SONG.player1));
-		#end
+		// #if debug
+		if (MainMenuState.isDevelopmentBuild)
+		{
+			if (FlxG.keys.justPressed.EIGHT)
+				FlxG.switchState(new AnimationDebug(SONG.player2));
+			if (FlxG.keys.justPressed.FIVE)
+				FlxG.switchState(new AnimationDebug(SONG.player1));
+		}
+		// #end
 
 		if (startingSong)
 		{
@@ -2767,7 +2787,12 @@ class PlayState extends MusicBeatState
 		{
 			notes.forEachAlive(function(daNote:Note)
 			{
-				if (daNote.y > FlxG.height)
+				if (!daNote.mustPress && ScarlettOptions.centerscroll)
+				{
+					daNote.active = true;
+					daNote.visible = false;
+				}
+				else if (daNote.y > FlxG.height)
 				{
 					daNote.active = false;
 					daNote.visible = false;
@@ -2785,6 +2810,7 @@ class PlayState extends MusicBeatState
 					&& daNote.y + daNote.offset.y <= strumLine.y + Note.swagWidth / 2
 					&& (!daNote.mustPress || (daNote.wasGoodHit || (daNote.prevNote.wasGoodHit && !daNote.canBeHit))))
 				{
+
 					var swagRect = new FlxRect(0, strumLine.y + Note.swagWidth / 2 - daNote.y, daNote.width * 2, daNote.height * 2);
 					swagRect.y /= daNote.scale.y;
 					swagRect.height -= swagRect.y;
@@ -2809,9 +2835,10 @@ class PlayState extends MusicBeatState
 					{
 						velvetScreamTime = 0;
 
-						if (!ScarlettOptions.getEpileptic())
+						if (!ScarlettOptions.epileptic)
 						{
-							FlxG.camera.shake(0.01, 0.25);
+							if (ScarlettOptions.screenShake)
+								FlxG.camera.shake(0.01, 0.25);
 							if (velvetChromeAb)
 							{
 								ch2 = 30;
@@ -2820,16 +2847,18 @@ class PlayState extends MusicBeatState
 							#if desktop
 							if (!FlxG.fullscreen && screenShift)
 							{
-								screenJitter(0.01);
+								if (ScarlettOptions.screenShake)
+									screenJitter(0.01);
 							}
 							#end
 						}
 						else
 						{
-							FlxG.camera.shake(0.01, 0.05);
+							if (ScarlettOptions.screenShake)
+								FlxG.camera.shake(0.01, 0.05);
 						}
 
-						if (ScarlettOptions.getRuvMode())
+						if (ScarlettOptions.ruvMode)
 						{
 							if (ruvMode)
 							{
@@ -2912,16 +2941,24 @@ class PlayState extends MusicBeatState
 					notes.remove(daNote, true);
 					daNote.destroy();
 				}
+
+				if (ScarlettOptions.downscroll)
+				{
+					daNote.y = ((daNote.y - 720) * -1) + 513;
+				}
 			});
 		}
 
 		if (!inCutscene)
 			keyShit();
 
-		#if debug
-		if (FlxG.keys.justPressed.ONE)
-			endSong();
-		#end
+		// #if debug
+		if (MainMenuState.isDevelopmentBuild)
+		{
+			if (FlxG.keys.justPressed.ONE)
+				endSong();
+		}
+		// #end
 	}
 
 	var cycleSongDelay:Bool = false;
@@ -2934,7 +2971,7 @@ class PlayState extends MusicBeatState
 		vocals.volume = 0;
 		if (SONG.validScore)
 		{
-			if (!ScarlettOptions.getGhostTap())
+			if (!ScarlettOptions.ghostTap)
 			{
 				#if !switch
 				if (isAltMix)
@@ -2966,7 +3003,7 @@ class PlayState extends MusicBeatState
 
 				if (SONG.validScore)
 				{
-					if (!ScarlettOptions.getGhostTap())
+					if (!ScarlettOptions.ghostTap)
 					{
 						NGio.unlockMedal(60961);
 						Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
@@ -3090,9 +3127,12 @@ class PlayState extends MusicBeatState
 			var strum:FlxSprite = playerStrums.members[daNote.noteData];
 			if(strum != null)
 			{
-				var recycledNote = splashGroup.recycle(NoteSplash);
-				recycledNote.setupNoteSplash(strum.x, strum.y, daNote.noteData);
-				splashGroup.add(recycledNote);
+				if (ScarlettOptions.noteSplash)
+				{
+					var recycledNote = splashGroup.recycle(NoteSplash);
+					recycledNote.setupNoteSplash(strum.x, strum.y, daNote.noteData);
+					splashGroup.add(recycledNote);
+				}
 			}
 		}
 
@@ -3129,7 +3169,10 @@ class PlayState extends MusicBeatState
 			pixelShitPart2 = '-pixel';
 		}
 
-		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
+		if (altMixAlbum == "B-Side" && isAltMix)
+			rating.loadGraphic(Paths.image("bside/" + pixelShitPart1 + daRating + pixelShitPart2));
+		else
+			rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
 		rating.screenCenter();
 		rating.x = coolText.x - 40;
 		rating.y -= 60;
@@ -3144,7 +3187,7 @@ class PlayState extends MusicBeatState
 		comboSpr.velocity.y -= 150;
 
 		comboSpr.velocity.x += FlxG.random.int(1, 10);
-		if (ScarlettOptions.getRatingVisibility())
+		if (ScarlettOptions.ratingVisibility)
 		{
 			add(rating);
 		}
@@ -3195,7 +3238,7 @@ class PlayState extends MusicBeatState
 			numScore.velocity.x = FlxG.random.float(-5, 5);
 
 			if (combo >= 10 || combo == 0)
-				if (ScarlettOptions.getRatingVisibility())
+				if (ScarlettOptions.ratingVisibility)
 				{
 					add(numScore);
 				}
@@ -3633,7 +3676,7 @@ class PlayState extends MusicBeatState
 		var krightP = controls.KRIGHT_P;
 		var kleftP = controls.KLEFT_P;
 
-		if (!ScarlettOptions.getGhostTap())
+		if (!ScarlettOptions.ghostTap)
 		{
 			if (mania == 1)
 			{
@@ -3879,7 +3922,7 @@ class PlayState extends MusicBeatState
 
 		if (generatedMusic)
 		{
-			notes.sort(FlxSort.byY, FlxSort.DESCENDING);
+			notes.sort(FlxSort.byY, ScarlettOptions.downscroll ? FlxSort.ASCENDING : FlxSort.DESCENDING);
 		}
 
 		if (SONG.notes[Math.floor(curStep / 16)] != null)
@@ -3995,7 +4038,8 @@ class PlayState extends MusicBeatState
 			if (curBeat == 324)
 			{
 				fragmentateUseLongOneShot = false;
-				camHUD.shake(0.05, 0.2);
+				if (ScarlettOptions.screenShake)
+					camHUD.shake(0.05, 0.2);
 				fragmentFragmentationSprites = true;
 			}
 			if (curBeat >= 360)

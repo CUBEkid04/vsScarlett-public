@@ -54,6 +54,9 @@ class TitleState extends MusicBeatState
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
+		if (curWacky[0] == "hello gordon i just got off the phone with my friend jon the new guy that is coming back from the last week and he said" && curWacky[1] == "i would be happy to join in with the group chat and then ill send you a bill for the next day and then ill make sure you have the money")
+			overrideTextSize = 0.2;
+
 		// DEBUG BULLSHIT
 
 		super.create();
@@ -217,6 +220,8 @@ class TitleState extends MusicBeatState
 		// credGroup.add(credTextShit);
 	}
 
+	var overrideTextSize:Float = 1.0;
+
 	function getIntroTextShit():Array<Array<String>>
 	{
 		var fullText:String = Assets.getText(Paths.txt('introText'));
@@ -325,13 +330,13 @@ class TitleState extends MusicBeatState
 		super.update(elapsed);
 	}
 
-	function createCoolText(textArray:Array<String>)
+	function createCoolText(textArray:Array<String>, ?size:Float = 1.0)
 	{
 		for (i in 0...textArray.length)
 		{
-			var money:Alphabet = new Alphabet(0, 0, textArray[i], true, false);
+			var money:Alphabet = new Alphabet(0, 0, textArray[i], true, false, 'alphabet', size);
 			money.screenCenter(X);
-			money.y += (i * 60) + 200;
+			money.y += ((i * 60) * size) + 200;
 			var placementY:Float = money.y;
 			money.y -= 10;
 			FlxTween.tween(money, { y: placementY }, 1, {
@@ -342,11 +347,11 @@ class TitleState extends MusicBeatState
 		}
 	}
 
-	function addMoreText(text:String)
+	function addMoreText(text:String, ?size:Float = 1.0)
 	{
-		var coolText:Alphabet = new Alphabet(0, 0, text, true, false);
+		var coolText:Alphabet = new Alphabet(0, 0, text, true, false, 'alphabet', size);
 		coolText.screenCenter(X);
-		coolText.y += (textGroup.length * 60) + 200;
+		coolText.y += ((textGroup.length * 60) * size) + 200;
 		var placementY:Float = coolText.y;
 		coolText.y -= 10;
 		FlxTween.tween(coolText, { y: placementY }, 1, {
@@ -407,10 +412,10 @@ class TitleState extends MusicBeatState
 			// credTextShit.text = 'Shoutouts Tom Fulp';
 			// credTextShit.screenCenter();
 			case 9:
-				createCoolText([curWacky[0]]);
+				createCoolText([curWacky[0]], overrideTextSize);
 			// credTextShit.visible = true;
 			case 11:
-				addMoreText(curWacky[1]);
+				addMoreText(curWacky[1], overrideTextSize);
 			// credTextShit.text += '\nlmao';
 			case 12:
 				deleteCoolText();

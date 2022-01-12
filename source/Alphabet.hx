@@ -50,6 +50,10 @@ class Alphabet extends FlxSpriteGroup
 	var diaSpeed:Float = 0.05;
 	public var finishedText:Bool = false;
 
+	public var lettersArray:Array<AlphaCharacter> = [];
+
+	public var typeGlobal:Bool = false;
+
 	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?fontSheet:String = 'alphabet', ?fontScale:Float = 1.0, ?typeSpeed:Float = 0.05)
 	{
 		super(x, y);
@@ -63,6 +67,7 @@ class Alphabet extends FlxSpriteGroup
 		fontSpriteSheet = fontSheet;
 		theFontColor = FlxColor.fromRGB(255, 255, 255);
 		diaSpeed = typeSpeed;
+		typeGlobal = typed;
 
 		if (text != "")
 		{
@@ -75,6 +80,52 @@ class Alphabet extends FlxSpriteGroup
 				addText();
 			}
 		}
+	}
+
+	// Section taken from PsychEngine
+	public function changeText(newText:String, ?newTypingSpeed:Float = -1)
+	{
+		for (i in 0...lettersArray.length)
+		{
+			var letter = lettersArray[0];
+			letter.destroy();
+			remove(letter);
+			lettersArray.remove(letter);
+		}
+		lettersArray = [];
+		splitWords = [];
+		loopNum = 0;
+		xPos = 0;
+		curRow = 0;
+		consecutiveSpaces = 0;
+		finishedText = false;
+		lastSprite = null;
+
+		var lastX = x;
+		x = 0;
+		_finalText = newText;
+		text = newText;
+		if(newTypingSpeed != -1)
+		{
+			diaSpeed = newTypingSpeed;
+		}
+
+		if (text != "")
+		{
+			if (typeGlobal)
+			{
+				startTypedText(diaSpeed);
+			}
+			else
+			{
+				addText();
+			}
+		}
+		else
+		{
+			finishedText = true;
+		}
+		x = lastX;
 	}
 
 	public function addText()
@@ -141,6 +192,7 @@ class Alphabet extends FlxSpriteGroup
 				}
 
 				add(letter);
+				lettersArray.push(letter);
 				lastSprite = letter;
 			}
 
@@ -274,6 +326,7 @@ class Alphabet extends FlxSpriteGroup
 				}
 
 				add(letter);
+				lettersArray.push(letter);
 
 				lastSprite = letter;
 			}
@@ -394,6 +447,7 @@ class Alphabet extends FlxSpriteGroup
 				}
 
 				add(letter);
+				lettersArray.push(letter);
 
 				lastSprite = letter;
 			}
