@@ -12,6 +12,9 @@ using StringTools;
 
 class Note extends FlxSprite
 {
+	public var checkMyTime:Float = 100000;
+
+
 	public var strumTime:Float = 0;
 
 	public var mustPress:Bool = false;
@@ -124,15 +127,14 @@ class Note extends FlxSprite
 			noteScore * 0.2;
 			alpha = 0.6;
 
-			if(ScarlettOptions.downscroll) flipY = true;
+			if(ScarlettOptions.downscroll)
+			{
+				flipY = true;
+			}
 
 			x += width / 2;
 
 			animation.play(frameN[noteData] + 'holdend');
-			if (ScarlettOptions.downscroll)
-			{
-				y += 79;
-			}
 			switch (noteData)
 			{
 				case 0:
@@ -152,10 +154,6 @@ class Note extends FlxSprite
 				{
 					case 0:
 					//nada
-				}
-				if (ScarlettOptions.downscroll)
-				{
-					y -= 79;
 				}
 				prevNote.animation.play(frameN[prevNote.noteData] + 'hold');
 				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * PlayState.SONG.speed * (0.7 / noteScale);

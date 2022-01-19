@@ -147,6 +147,7 @@ class FreeplayState extends MusicBeatState
 		}
 
 		changeSelection();
+		MainMenuState.lambda = false;
 		changeDiff();
 
 		// FlxG.sound.playMusic(Paths.music('title'), 0);

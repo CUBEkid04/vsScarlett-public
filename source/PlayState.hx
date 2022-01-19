@@ -903,6 +903,7 @@ class PlayState extends MusicBeatState
 				}
 			}
 
+
                         case 'spookeez' | 'monster' | 'south': 
                         {
                                 curStage = 'spooky';
@@ -1298,6 +1299,9 @@ class PlayState extends MusicBeatState
 		gf = new Character(400, 130, gfVersion);
 		gf.scrollFactor.set(0.95, 0.95);
 
+		if (curStage == 'glacier')
+			gf.x -= 140;
+
 		gf.visible = !SONG.hideGirlfriend;
 
 		dad = new Character(100, 100, SONG.player2);
@@ -1433,7 +1437,7 @@ class PlayState extends MusicBeatState
 
 		Conductor.songPosition = -5000;
 
-		strumLine = new FlxSprite(0, (50 * hudYMultiplier) + hudYOffset).makeGraphic(FlxG.width, 10);
+		strumLine = new FlxSprite(0, 50).makeGraphic(FlxG.width, 10);
 		strumLine.scrollFactor.set();
 
 		strumLineNotes = new FlxTypedGroup<FlxSprite>();
@@ -2152,7 +2156,7 @@ class PlayState extends MusicBeatState
 		{
 			// FlxG.log.add(i);
 
-			var babyArrow:FlxSprite = new FlxSprite(0, strumLine.y);
+			var babyArrow:FlxSprite = new FlxSprite(0, (strumLine.y * hudYMultiplier) + hudYOffset);
 			// hudArrows.push(babyArrow);
 
 			switch (curStage)
@@ -2787,12 +2791,14 @@ class PlayState extends MusicBeatState
 		{
 			notes.forEachAlive(function(daNote:Note)
 			{
+				daNote.checkMyTime = (strumLine.y - (Conductor.songPosition - daNote.strumTime) * (0.45 * (daNote.warning ? 1.4 : 1) * FlxMath.roundDecimal(SONG.speed, 2)));
+
 				if (!daNote.mustPress && ScarlettOptions.centerscroll)
 				{
 					daNote.active = true;
 					daNote.visible = false;
 				}
-				else if (daNote.y > FlxG.height)
+				else if (daNote.checkMyTime > FlxG.height)
 				{
 					daNote.active = false;
 					daNote.visible = false;
@@ -2805,13 +2811,23 @@ class PlayState extends MusicBeatState
 
 				daNote.y = (strumLine.y - (Conductor.songPosition - daNote.strumTime) * (0.45 * (daNote.warning ? 1.4 : 1) * FlxMath.roundDecimal(SONG.speed, 2)));
 
+				if (ScarlettOptions.downscroll)
+				{
+					daNote.y = ( ((strumLine.y * hudYMultiplier) + hudYOffset) - (Conductor.songPosition - daNote.strumTime) * (0.45 * (daNote.warning ? 1.4 : 1) * FlxMath.roundDecimal(SONG.speed, 2)));
+
+					daNote.y = ((daNote.y - 720) * -1) + 513;
+
+					if (daNote.animation.curAnim.name.endsWith("end"))
+						daNote.y += 79;
+				}
+
 				// i am so fucking sorry for this if condition
 				if (daNote.isSustainNote
-					&& daNote.y + daNote.offset.y <= strumLine.y + Note.swagWidth / 2
+					&& daNote.checkMyTime + daNote.offset.y <= strumLine.y + Note.swagWidth / 2
 					&& (!daNote.mustPress || (daNote.wasGoodHit || (daNote.prevNote.wasGoodHit && !daNote.canBeHit))))
 				{
 
-					var swagRect = new FlxRect(0, strumLine.y + Note.swagWidth / 2 - daNote.y, daNote.width * 2, daNote.height * 2);
+					var swagRect = new FlxRect(0, strumLine.y + Note.swagWidth / 2 - daNote.checkMyTime, daNote.width * 2, daNote.height * 2);
 					swagRect.y /= daNote.scale.y;
 					swagRect.height -= swagRect.y;
 
@@ -2915,7 +2931,7 @@ class PlayState extends MusicBeatState
 				// WIP interpolation shit? Need to fix the pause issue
 				// daNote.y = (strumLine.y - (songTime - daNote.strumTime) * (0.45 * PlayState.SONG.speed));
 
-				if (daNote.y < -daNote.height)
+				if (daNote.checkMyTime < -daNote.height)
 				{
 					if (daNote.tooLate || !daNote.wasGoodHit)
 					{
@@ -2940,11 +2956,6 @@ class PlayState extends MusicBeatState
 					daNote.kill();
 					notes.remove(daNote, true);
 					daNote.destroy();
-				}
-
-				if (ScarlettOptions.downscroll)
-				{
-					daNote.y = ((daNote.y - 720) * -1) + 513;
 				}
 			});
 		}
@@ -4150,6 +4161,10 @@ class PlayState extends MusicBeatState
 					trainCooldown = FlxG.random.int(-4, 0);
 					trainStart();
 				}
+
+			case 'glacier':
+				upperBoppers.animation.play('bop', true);
+				bottomBoppers.animation.play('bop', true);
 		}
 
 		if (curSong.toLowerCase() == 'wet-paint' && curBeat == 16)

@@ -10,6 +10,7 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.input.keyboard.FlxKey;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -26,6 +27,7 @@ using StringTools;
 class MainMenuState extends MusicBeatState
 {
 	public static var isDevelopmentBuild:Bool = false;
+	public static var lambda:Bool = false;
 
 	var curSelected:Int = 0;
 
@@ -49,10 +51,17 @@ class MainMenuState extends MusicBeatState
 	public static var loadedUp:Bool = false;
 	var timeAddInto:Float = 0.0;
 
+	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.L, FlxKey.A, FlxKey.M, FlxKey.B, FlxKey.D, FlxKey.A];
+	var lastKeysPressed:Array<FlxKey> = [];
+
+	var lambdaLinks:Array<String> = ["https://store.steampowered.com/app/70/HalfLife/", "https://store.steampowered.com/app/546560/HalfLife_Alyx/", "https://store.steampowered.com/app/220/HalfLife_2/", "https://store.steampowered.com/app/380/HalfLife_2_Episode_One/", "https://store.steampowered.com/app/420/HalfLife_2_Episode_Two/"];
+
 	override function create()
 	{
+		if (lambda)
+			optionShit = ['story mode', 'freeplay', 'gamebanana', 'options', 'lambda'];
 		if (isDevelopmentBuild)
-			optionShit = ['story mode', 'freeplay', 'altmix', 'bonus weeks', 'gamebanana', 'options'];
+			optionShit = ['story mode', 'freeplay', 'altmix', 'bonus weeks', 'gamebanana', 'lambda', 'options'];
 
 		PlayState.isAltMix = false; // so B-Side Icons wont replace freeplay icons
 
@@ -177,6 +186,39 @@ class MainMenuState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
+			// Section taken from an older version of PsychEngine
+			var finalKey:FlxKey = FlxG.keys.firstJustPressed();
+			if(finalKey != FlxKey.NONE)
+			{
+				lastKeysPressed.push(finalKey);
+				if(lastKeysPressed.length > easterEggKeyCombination.length)
+				{
+					lastKeysPressed.shift();
+				}
+				
+				if(lastKeysPressed.length == easterEggKeyCombination.length)
+				{
+					var isDifferent:Bool = false;
+					for (i in 0...lastKeysPressed.length)
+					{
+						if(lastKeysPressed[i] != easterEggKeyCombination[i])
+						{
+							isDifferent = true;
+							break;
+						}
+					}
+
+					if(!isDifferent)
+					{
+						trace('Lambda');
+						lambda = true;
+						FlxG.sound.playMusic(Paths.music('lambda'), 0);
+						lastKeysPressed = [];
+					}
+				}
+			}
+
+
 			if (controls.UP_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -189,7 +231,7 @@ class MainMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
-			if (controls.BACK)
+			if (controls.BACK && !lambda)
 			{
 				FlxG.switchState(new TitleState());
 			}
@@ -202,6 +244,16 @@ class MainMenuState extends MusicBeatState
 					Sys.command('/usr/bin/xdg-open', ["https://gamebanana.com/mods/307460", "&"]);
 					#else
 					FlxG.openURL('https://gamebanana.com/mods/307460');
+					#end
+				}
+				else if (optionShit[curSelected] == 'lambda')
+				{
+					var theLambda:Int = Std.random(lambdaLinks.length);
+
+					#if linux
+					Sys.command('/usr/bin/xdg-open', [lambdaLinks[theLambda], "&"]);
+					#else
+					FlxG.openURL(lambdaLinks[theLambda]);
 					#end
 				}
 				else

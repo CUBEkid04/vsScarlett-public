@@ -22,7 +22,7 @@ class ScarlettOptionsState extends MusicBeatState
 		['Epileptic Mode', "Selectable", "Heavily reduces the amount of crazy VFX\nin certain songs.\nENABLE THIS IMMEDIATELY IF YOU ARE PRONE TO EPILEPSY!", "Bool"],
 		['Screenshake', "Selectable", "Makes the screen shake around sometimes.\nPlayers who get motionsick easily should disable this.\n ", "Bool"],
 		['Color Shift', "Selectable", "Depending on the environment,\nchanges most backdrop elements and characters\ncolor to reflect the current environment.", "Bool"],
-		['Downscroll', "Selectable", " \nInverts the strum scroll so notes scroll downward instead of upward\n (WARNING: Extremely wonky, as some note hits dont register properly!)", "Bool"],
+		['Downscroll', "Selectable", " \nInverts the strum scroll so notes scroll downward instead of upward\n ", "Bool"],
 		['Center Scroll', "Selectable", " \nCenters player strums and hides enemy strums\n ", "Bool"],
 		['Ghost Tapping', "Selectable", "Disables missing when pressing keys.\nProvides a forgiving game.\n(High scores aren't saved when active)", "Bool"],
 		['Ratings Visibility', "Selectable", " \nDetermines note hit rating and combo visibiltiy\n ", "Bool"],
