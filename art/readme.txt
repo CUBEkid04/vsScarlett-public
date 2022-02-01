@@ -13,7 +13,7 @@
                                         
 
 
-Thank you for downloading the VS. Scarlett Full Week mod for Friday Night Funkin'
+Thank you for downloading the Scarlett Weeks mod for Friday Night Funkin'
 The only official download for this mod is on GameBanana. If you downloaded this anywhere else,
 you may be at risk!
 
@@ -32,7 +32,7 @@ ASK FIRST:
 YOU MAY NOT:
  - Reupload anywhere
  - Change and reupload the mod
- - Do NSFW of underage characters, no matter what
+ - Do NSFW of underage characters, no matter what (you fuckers have already broken this 6 months after the mods initial release)
 
 
 _______________________________________________________________________________________________
